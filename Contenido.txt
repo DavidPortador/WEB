@@ -1,0 +1,93 @@
+Laravel by dp
+
+Requisitos y sus comandos de instalacion:
+	WSL [terminal de windows (PowerShell)]
+		wsl --install
+	Apache2 [TODO LO DEMAS en la terminal de ubuntu]
+		sudo apt install apache2
+		sudo service apache2 start
+  * Mariadb [sudo mysql -u root -p]
+		sudo apt install mariadb-server
+		sudo service mariadb start
+		sudo mysql_secure_installation
+	PHP
+		sudo apt-get install php libapache2-mod-php php-mysql php-zip php-curl php-xml
+	Composer
+		php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+		php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+		php composer-setup.php
+		php -r "unlink('composer-setup.php');"
+		sudo mv composer.phar /usr/local/bin/composer
+
+Extensiones de VS Code [Asegurarse de que las extensiones de laravel tambien se hayan instalado remotamente]
+	Remote Explorer
+	Remote - SSH
+	Remote - SSH: Editing Configuration Files
+	WSL
+	vscode-icons
+	Laravel Snippets
+	Laravel Blade Snippets
+	Laravel Blade formatter
+
+Creacion de proyecto en Laravel
+	composer create-project laravel/laravel ProyectName
+	cd ProyectName/
+	php artisan serve
+
+Estructura de carpetas y archivos importantes de Laravel
+	app 
+		Http
+			Controllers [codigo fuente de los controladores]
+	  * Models [modelos para las tablas creadas en la bd (ORM)]
+  * config [configuraciones por defecto de laravel]
+  * database [proceso de estructuracion de la base de datos]
+  	public [unica carpeta publica]
+		assets
+		css
+		js
+	resources
+		views [contiene las vistas de la aplicacion basadas en blade]
+	routes
+		web.php  [rutas de la aplicacion (conecta la vista con el controlador)]
+	.env [guarda variables las cuales no son visibles para cualquier usuario]
+	artisan [linea de comandos ejecutables para la terminal]
+
+Comandos importantes de artisan para controlar el servidor
+	php artisan serve
+	php artisan list
+		php artisan make:controller
+	  * php artisan make:migration
+	  * php artisan make:model
+		php artisan route:list
+
+Estructura de platillas de blade [empaquetar codigo]
+	/* Desde el template se crea el parametro que obtiene datos dinamicos */
+		<div>
+			@yield('content')
+		</div>
+
+	/* Desde cualquier vista que haga referencia al template se concatenaran ambos codigos*/
+		@extends('templates')
+		@section('content')
+			<p>
+				Contenido de la vista a partir de una plantilla
+			</>
+		@endsection
+
+Documentacion oficial de las librerias implementadas en el sistema
+	Bootstrap
+		https://getbootstrap.com/
+	Font Awesome
+		https://fontawesome.com/icons
+	JQuery
+		https://jquery.com/
+	Sweet Alert
+		https://sweetalert2.github.io/
+	Animate
+		https://animate.style/
+	CLNDR
+		https://kylestetz.github.io/CLNDR/
+	html5-qrcode
+		https://blog.minhazav.dev/research/html5-qrcode.html
+	image-base64
+		https://refine.dev/blog/how-to-base64-upload/

@@ -1,0 +1,109 @@
+body {
+    background-color: #131414;
+    max-width: 100vw;
+    color: white;
+}
+
+.fotop {
+    position: relative;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.texto-encima {
+    position: absolute;
+    top: 95%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.imgeditar {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**********File Inputs**********/
+.container-input {
+    text-align: center;
+    border-radius: 6px;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    max-width: 10rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.inputfile+label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.iborrainputfile {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Lato';
+}
+
+label {
+    color: white !important;
+}
+
+label:hover {
+    color: antiquewhite !important;
+}
+
+.inputfile-5+label {
+    color: #17202a;
+}
+
+.inputfile-5:focus+label,
+.inputfile-5.has-focus+label,
+.inputfile-5+label:hover {
+    color: #29323d;
+}
+
+.inputfile-5+label figure {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #17202a;
+    display: block;
+    padding: 10px;
+    margin: 0 auto 10px;
+}
+
+.inputfile-5:focus+label figure,
+.inputfile-5.has-focus+label figure,
+.inputfile-5+label:hover figure {
+    background-color: #29323d;
+}
+
+.inputfile-5+label svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+}
+
+/**********End File Inputs**********/
